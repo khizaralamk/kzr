@@ -1,5 +1,6 @@
 import 'custom-cursor-react/dist/index.css'
 import AboutSection from './components/AboutSection'
+import ContactSection from './components/ContactSection'
 import GallerySection from './components/GallerySection'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
@@ -17,6 +18,7 @@ export default function App() {
         <HeroSection />
         <GallerySection />
         <AboutSection />
+        <ContactSection />
        
       </main>
 
