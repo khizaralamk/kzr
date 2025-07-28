@@ -13,7 +13,7 @@ export default function NavBar() {
           {/* Toggle Switch */}
           <button
             className={
-              `relative w-12 h-7 sm:w-14 sm:h-9 flex items-center bg-white rounded-full shadow focus:outline-none transition-colors border border-gray-300 mr-2 pl-1 pr-1 py-1`
+              `relative w-12 h-7 sm:w-14 sm:h-9 hidden sm:flex items-center bg-white rounded-full shadow focus:outline-none transition-colors border border-gray-300 mr-2 pl-1 pr-1 py-1`
             }
             onClick={() => setToggleOn((prev) => !prev)}
             aria-pressed={toggleOn}
@@ -27,7 +27,7 @@ export default function NavBar() {
             />
           </button>
           {/* Divider */}
-          <span className="mx-2 sm:mx-4 h-6 sm:h-8 w-px bg-gray-300" />
+          <span className="mx-2 sm:mx-4 h-6 sm:h-8 w-px bg-gray-300 hidden sm:block" />
           {/* Social Icons */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             <a href="#" aria-label="GitHub" className="hover:opacity-70">
