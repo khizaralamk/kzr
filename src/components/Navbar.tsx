@@ -30,7 +30,7 @@ export default function NavBar() {
           <span className="mx-2 sm:mx-4 h-6 sm:h-8 w-px bg-gray-300 hidden sm:block" />
           {/* Social Icons */}
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <a href="#" aria-label="GitHub" className="hover:opacity-70">
+            <a href="https://github.com/KhizarAlam20" target='_blank' aria-label="GitHub" className="hover:opacity-70">
               <FaGithub size={20} className="sm:w-6 sm:h-6" />
             </a>
             <a href="#" aria-label="X" className="hover:opacity-70">
@@ -39,7 +39,7 @@ export default function NavBar() {
             <a href="#" aria-label="LinkedIn" className="hover:opacity-70">
               <FaLinkedin size={20} className="sm:w-6 sm:h-6" />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-70">
+            <a href="https://instagram.com/khizaralam09" target='_blank' aria-label="Instagram" className="hover:opacity-70">
               <FaInstagram size={20} className="sm:w-6 sm:h-6" />
             </a>
           </div>

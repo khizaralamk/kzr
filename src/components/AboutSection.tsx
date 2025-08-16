@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section className="w-full min-h-[100vh] flex flex-col items-center justify-center px-4 sm:px-6 md:px-9 py-12 md:py-20">
+    <section className="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-9 py-12 md:py-20">
       <div className="w-full max-w-7xl mx-auto flex flex-col">
         {/* Heading */}
         <div className="flex w-full justify-center mb-12 md:mb-16">

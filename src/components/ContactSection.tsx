@@ -3,7 +3,7 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 export default function ContactSection() {
 
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 sm:px-6 md:px-9 py-8 md:py-12 bg-black">
+    <section className="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-9 py-8 md:py-12 bg-black">
       <div className="w-full max-w-6xl mx-auto flex flex-col">
         {/* Heading */}
         <div className="flex w-full justify-center mb-8 md:mb-12">
