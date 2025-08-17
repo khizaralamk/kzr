@@ -6,12 +6,13 @@ export default function GalleryGrid() {
         {/* First column */}
         <div className="flex flex-col gap-4 md:gap-6 -mt-6 md:-mt-12 min-w-0 ">
           <div className="aspect-square min-w-0 overflow-hidden relative">
-            <img src="https://res.cloudinary.com/dfgr1deco/image/upload/f_auto,q_auto,w_800,fl_progressive/samples/landscapes/beach-boat.jpg" alt="Gallery 1" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
+            <img src="https://res.cloudinary.com/dfgr1deco/image/upload/ss3_qpbmil.png" alt="Gallery 1" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
             <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/95 backdrop-blur-sm text-black px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full z-10 text-center">Design</span>
           </div>
-          
+
           <div className="aspect-square min-w-0 overflow-hidden relative">
-            <img src="https://res.cloudinary.com/dfgr1deco/image/upload/f_auto,q_auto,w_800,dpr_auto,c_fill,g_auto,fl_progressive/samples/people/jazz.jpg" alt="Gallery 3" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
+            <img src="https://res.cloudinary.com/dfgr1deco/image/upload/f_auto,q_auto,w_500/onboarding_screen_3_zplfa2.png
+" alt="Gallery 3" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
             <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/95 backdrop-blur-sm text-black px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full z-10 text-center">Art</span>
           </div>
           <div className="aspect-square min-w-0 overflow-hidden relative">
@@ -33,7 +34,7 @@ export default function GalleryGrid() {
             <img src="https://res.cloudinary.com/dfgr1deco/image/upload/f_auto,q_auto,w_800,dpr_auto,c_fill,g_auto,fl_progressive/samples/food/fish-vegetables.jpg" alt="Gallery 6" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
             <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/95 backdrop-blur-sm text-black px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full z-10 text-center">Web Design</span>
           </div>
-        
+
           <div className="aspect-square min-w-0 overflow-hidden relative">
             <img src="https://res.cloudinary.com/dfgr1deco/image/upload/samples/landscapes/architecture-signs.jpg" alt="Gallery 7" className="w-full h-full object-cover hover:scale-125 transition-transform duration-500" />
             <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/95 backdrop-blur-sm text-black px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full z-10 text-center">Illustration</span>
@@ -44,9 +45,9 @@ export default function GalleryGrid() {
           </div>
         </div>
       </div>
-      
+
       {/* Download Portfolio Buttons */}
-     
+
     </div>
   );
 } 
