@@ -100,47 +100,102 @@ export default function PagingContainer({ children, sectionNames }: PagingContai
 
   return (
     <div className="w-full h-screen overflow-hidden relative">
-      {/* Page Indicators */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50 flex space-x-3">
-        {sectionNames.map((name, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-                         className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-               currentPage === index
-                 ? currentPage === 3 ? 'bg-white text-black' : 'bg-black text-white'
-                 : currentPage === 3 ? 'bg-transparent text-white hover:bg-white hover:text-black' : 'bg-transparent text-black hover:bg-black hover:text-white'
-             }`}
-          >
-            {name}
-          </button>
-        ))}
+      {/* Mobile Layout - Compact and Non-overlapping */}
+      <div className="block sm:hidden">
+        {/* Top Spacing for Mobile */}
+        <div className="h-16"></div>
+        
+        {/* Page Indicators - Mobile */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-50 flex flex-wrap justify-center gap-1 px-2">
+          {sectionNames.map((name, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 ${
+                currentPage === index
+                  ? currentPage === 3 ? 'bg-white text-black' : 'bg-black text-white'
+                  : currentPage === 3 ? 'bg-transparent text-white' : 'bg-transparent text-black'
+              }`}
+            >
+              {name}
+            </button>
+          ))}
+        </div>
+
+        {/* Navigation Arrows - Mobile */}
+        <button
+          onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
+          disabled={currentPage === 0}
+          className={`absolute left-2 top-1/2 transform -translate-y-1/2 z-40 w-8 h-8 rounded-full bg-white bg-opacity-90 transition-all duration-300 flex items-center justify-center ${
+            currentPage === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100 cursor-pointer'
+          }`}
+        >
+          <span className="text-xs">←</span>
+        </button>
+        
+        <button
+          onClick={() => setCurrentPage(prev => Math.min(children.length - 1, prev + 1))}
+          disabled={currentPage === children.length - 1}
+          className={`absolute right-2 top-1/2 transform -translate-y-1/2 z-40 w-8 h-8 rounded-full bg-white bg-opacity-90 transition-all duration-300 flex items-center justify-center ${
+            currentPage === children.length - 1 ? 'opacity-30 cursor-not-allowed' : 'opacity-100 cursor-pointer'
+          }`}
+        >
+          <span className="text-xs">→</span>
+        </button>
+
+        {/* Page Counter - Mobile */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-50 bg-white bg-opacity-90 px-2 py-1 rounded-full text-xs font-medium">
+          {currentPage + 1} / {children.length}
+        </div>
+
+        {/* Bottom Spacing for Mobile */}
+        <div className="h-16"></div>
       </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
-        disabled={currentPage === 0}
-        className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 transition-all duration-300 flex items-center justify-center ${
-          currentPage === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'
-        }`}
-      >
-        ←
-      </button>
-      
-      <button
-        onClick={() => setCurrentPage(prev => Math.min(children.length - 1, prev + 1))}
-        disabled={currentPage === children.length - 1}
-        className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 transition-all duration-300 flex items-center justify-center ${
-          currentPage === children.length - 1 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'
-        }`}
-      >
-        →
-      </button>
+      {/* Desktop Layout - Original Design */}
+      <div className="hidden sm:block">
+        {/* Page Indicators */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50 flex space-x-3">
+          {sectionNames.map((name, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                currentPage === index
+                  ? currentPage === 3 ? 'bg-white text-black' : 'bg-black text-white'
+                  : currentPage === 3 ? 'bg-transparent text-white hover:bg-white hover:text-black' : 'bg-transparent text-black hover:bg-black hover:text-white'
+              }`}
+            >
+              {name}
+            </button>
+          ))}
+        </div>
 
-      {/* Page Counter */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-white bg-opacity-80 px-4 py-2 rounded-full text-sm font-medium">
-        {currentPage + 1} / {children.length}
+        {/* Navigation Arrows */}
+        <button
+          onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
+          disabled={currentPage === 0}
+          className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 transition-all duration-300 flex items-center justify-center ${
+            currentPage === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'
+          }`}
+        >
+          <span className="text-base">←</span>
+        </button>
+        
+        <button
+          onClick={() => setCurrentPage(prev => Math.min(children.length - 1, prev + 1))}
+          disabled={currentPage === children.length - 1}
+          className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 transition-all duration-300 flex items-center justify-center ${
+            currentPage === children.length - 1 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'
+          }`}
+        >
+          <span className="text-base">→</span>
+        </button>
+
+        {/* Page Counter */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-white bg-opacity-80 px-4 py-2 rounded-full text-sm font-medium">
+          {currentPage + 1} / {children.length}
+        </div>
       </div>
 
       {/* Scrollable Container */}
