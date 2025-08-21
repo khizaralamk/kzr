@@ -2,31 +2,61 @@
 
 export default function AboutSection() {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-9 py-12 md:py-20">
-      <div className="w-full max-w-7xl mx-auto flex flex-col">
-        {/* Heading */}
-        <div className="flex w-full justify-center mb-12 md:mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-benne text-center">more about me</h2>
+    // container 1
+    <section className="w-full min-h-screen bg-white py-24 px-6 sm:px-4 max-w-xs md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto  flex items-center justify-center">
+      
+      {/* container 2 */}
+      <div className="w-full max-w-7xl mx-auto ">
+        {/* Swiss Design Grid Layout - Centered */}
+        <div className="flex flex-col items-center text-center">
+          
+          {/* Main Content - Centered */}
+          <div className="md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto space-y-16">
+            
+            {/* Section Title with Swiss Typography */}
+            <div className="space-y-4 mb-12 text-right pt-12">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-benne text-black leading-none tracking-tight">
+                ABOUT
+              </h2>
+              <div className="text-xl text-gray-600 tracking-wide">
+                <a href="#" className="hover:text-black transition-colors duration-300">my tech portfolio</a> | <a href="#" className="hover:text-black transition-colors duration-300">my design portfolio</a>
+              </div>
+            </div>
+            
+            {/* Main Content Block */}
+            <div className="space-y-8">
+              <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-justify">
+                As someone who has been exploring and building with AI for a long time, I thrive on curiosity and creativity. I love turning ideas into reality, whether through code, design, or art. My journey is driven by a passion for learning, experimenting, and pushing boundaries—always eager to discover what's next and make a positive impact through technology. Every project is an opportunity to grow, connect, and inspire. Looking ahead, I'm excited to continue this journey, embracing new challenges and shaping a future where creativity and technology go hand in hand.
+              </p>
+            </div>
+            
+            {/* Key Statistics - Centered Above Download Heading */}
+            <div className="pt-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
+                <div className="text-center space-y-2">
+                  <div className="text-4xl md:text-5xl font-bold text-black">15+</div>
+                  <div className="text-sm uppercase tracking-widest text-gray-600">Years Experience</div>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="text-4xl md:text-5xl font-bold text-black">200+</div>
+                  <div className="text-sm uppercase tracking-wider text-gray-600">Projects Completed</div>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="text-4xl md:text-5xl font-bold text-black">50+</div>
+                  <div className="text-sm uppercase tracking-wider text-gray-600">Happy Clients</div>
+                </div>
+              </div>
+            </div>
+            
+
+            
+
+          </div>
         </div>
         
-        {/* Subheading: Quote Icon and Text */}
-        <div className="flex flex-col sm:flex-row items-start w-full justify-center mb-16 md:mb-20">
-          <span className="text-5xl sm:text-6xl md:text-7xl text-black mb-6 sm:mb-0 sm:mr-8 sm:mt-2 self-center sm:self-start">&#8220;</span>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-500 leading-relaxed text-justify px-12 sm:px-0 max-w-4xl">
-            As someone who has been exploring and building with AI for a long time, I thrive on curiosity and creativity. I love turning ideas into reality, whether through code, design, or art. My journey is driven by a passion for learning, experimenting, and pushing boundaries—always eager to discover what's next and make a positive impact through technology. Every project is an opportunity to grow, connect, and inspire. Looking ahead, I'm excited to continue this journey, embracing new challenges and shaping a future where creativity and technology go hand in hand.
-          </p>
-        </div>
 
-        {/* Download Portfolio Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 md:gap-8 w-full max-w-4xl mx-auto px-8 md:px-0">
-          <button className="flex-1 border-2 border-black px-2 py-3 text-base font-semibold hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide">
-            Download Development Portfolio
-          </button>
-          <button className="flex-1 border-2 border-black px-6 py-3 text-base font-semibold uppercase tracking-wide relative overflow-hidden group">
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Download Design Portfolio</span>
-            <div className="absolute inset-0 bg-black transform scale-y-0 origin-center transition-transform duration-500 ease-out group-hover:scale-y-100"></div>
-          </button>
-        </div>
       </div>
     </section>
   );

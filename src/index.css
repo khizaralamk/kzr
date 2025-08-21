@@ -4,6 +4,12 @@
 
 html, body {
   @apply font-benne;
+  scroll-behavior: smooth;
+}
+
+/* Enable scroll snapping for full-height sections */
+html {
+  scroll-snap-type: y mandatory;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
