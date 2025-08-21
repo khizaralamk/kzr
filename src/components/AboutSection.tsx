@@ -14,7 +14,7 @@ export default function AboutSection() {
           <div className="md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto space-y-16">
             
             {/* Section Title with Swiss Typography */}
-            <div className="space-y-4 mb-12 text-right pt-12">
+            <div className="space-y-4 mb-12 text-right ">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-benne text-black leading-none tracking-tight">
                 ABOUT
               </h2>
@@ -34,17 +34,17 @@ export default function AboutSection() {
             <div className="pt-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
                 <div className="text-center space-y-2">
-                  <div className="text-4xl md:text-5xl font-bold text-black">15+</div>
+                  <div className="text-4xl md:text-5xl ">15+</div>
                   <div className="text-sm uppercase tracking-widest text-gray-600">Years Experience</div>
                 </div>
                 
                 <div className="text-center space-y-2">
-                  <div className="text-4xl md:text-5xl font-bold text-black">200+</div>
+                  <div className="text-4xl md:text-5xl font">200+</div>
                   <div className="text-sm uppercase tracking-wider text-gray-600">Projects Completed</div>
                 </div>
                 
                 <div className="text-center space-y-2">
-                  <div className="text-4xl md:text-5xl font-bold text-black">50+</div>
+                  <div className="text-4xl md:text-5xl">50+</div>
                   <div className="text-sm uppercase tracking-wider text-gray-600">Happy Clients</div>
                 </div>
               </div>
